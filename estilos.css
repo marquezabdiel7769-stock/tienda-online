@@ -1,0 +1,95 @@
+/* FASE 2: Efectos de tarjetas, botones y animaciones */
+article {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    animation: aparecer 0.45s ease both;
+}
+
+article:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 25px #1d436033;
+}
+
+button {
+    transition: transform 0.15s ease, background 0.2s ease;
+    background-color: rgba(17, 213, 50, 0.529);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    article, button, .notificacion {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* FASE 3: Diseño de la notificación flotante */
+.notificacion {
+    position: fixed;
+    top: 18px;
+    right: 18px;
+    z-index: 10;
+    background: #136b54;
+    color: white;
+    padding: 13px 18px;
+    border-radius: 10px;
+    box-shadow: 0 6px 22px #0003;
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+    transition: opacity 0.3s, transform 0.3s;
+    max-width: 300px;
+}
+
+.notificacion.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* FASE 8: Estilo del contador visual */
+.contador {
+    display: inline-block;
+    border-radius: 50%;
+    background: #096ab1;
+    color: white;
+    padding: 4px 10px;
+    font-size: 14px;
+}
+
+/* FASE 10: Estilos para la sección multimedia (video) */
+.multimedia {
+    max-width: 1100px;
+    margin: 24px auto;
+    padding: 22px;
+    background: rgba(23, 222, 153, 0.463);
+    border-radius: 14px;
+}
+
+.multimedia video {
+    display: block;
+    max-width: 100%;
+    margin: 12px 0;
+    border-radius: 12px;
+    background: #102a46;
+}
+
+.multimedia button {
+    margin: 0 8px 8px 0;
+}
+body{
+    color: #102a46;
+    background-color: #109a59a4;
+}
