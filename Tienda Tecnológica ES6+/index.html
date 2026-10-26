@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Tecnológica ES6+</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <!-- FASE 1: Contenedor de notificaciones accesibles -->
+    <div id="notificacion" class="notificacion" role="status" aria-live="polite"></div>
+
+    <header>
+        <h1>Tienda Tecnológica</h1>
+        <!-- Aquí irían tus filtros y catálogo originales -->
+    </header>
+
+    <main>
+        <!-- Sección de Catálogo y Filtros (Base previa) -->
+        <section id="catalogo">
+            <!-- Tus productos dinámicos -->
+        </section>
+
+        <section id="carrito-seccion">
+            <!-- FASE 8: Contador visual de productos -->
+            <h2>Mi carrito <span id="contador" class="contador">0</span></h2>
+            <div id="resumen"></div>
+            <button id="vaciar" type="button">Vaciar Carrito</button>
+        </section>
+    </main>
+
+    <!-- FASE 9: Integración de video HTML5 de demostración -->
+    <section class="multimedia" aria-label="Presentación de la tienda">
+        <h2>Conoce nuestra tienda</h2>
+        <p>Video demostrativo de nuestros productos.</p>
+        <video id="videoTienda" controls preload="metadata" width="640">
+            <source src="video/Demo-video.mp4" type="video/mp4">
+            Tu navegador no admite video HTML5.
+        </video>
+        <div>
+            <button id="reproducirVideo" type="button">Reproducir video</button>
+            <button id="pausarVideo" type="button">Pausar video</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 CBTis No. 187</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
